@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_register_grapgh"
+    app:startDestination="@id/introduction_Fragment">
+
+    <fragment
+        android:id="@+id/introduction_Fragment"
+        android:name="com.example.shopit.fragments.Introduction_Fragment"
+        android:label="Introduction_Fragment"
+        tools:layout="@layout/fragment_introduction">
+        <action
+            android:id="@+id/action_introduction_Fragment_to_login_Fragment"
+            app:destination="@id/account_option_fragment" />
+        <action
+            android:id="@+id/action_introduction_Fragment_to_account_option_fragment"
+            app:destination="@id/account_option_fragment" />
+        <action
+            android:id="@+id/action_introduction_Fragment_to_account_option_fragment2"
+            app:destination="@id/account_option_fragment"
+            app:enterAnim="@anim/bottom_toup" />
+    </fragment>
+    <fragment
+        android:id="@+id/login_Fragment"
+        tools:layout="@layout/fragment_login"
+        android:name="com.example.shopit.fragments.Login_Fragment"
+        android:label="Login_Fragment" >
+        <action
+            android:id="@+id/action_login_Fragment_to_register_Fragment"
+            app:destination="@id/register_Fragment"
+            app:popUpTo="@id/introduction_Fragment" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_register"
+        android:id="@+id/register_Fragment"
+        android:name="com.example.shopit.fragments.Register_Fragment"
+        android:label="Register_Fragment" >
+        <action
+            android:id="@+id/action_register_Fragment_to_login_Fragment"
+            app:destination="@id/login_Fragment"
+            app:popUpTo="@id/introduction_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/account_option_fragment"
+        tools:layout="@layout/fragment_account_option"
+        android:name="com.example.shopit.fragments.Account_option_fragment"
+        android:label="Account_option_fragment" >
+        <action
+            android:id="@+id/action_account_option_fragment_to_login_Fragment"
+            app:destination="@id/login_Fragment"
+            app:enterAnim="@anim/right_toleft"
+            app:popUpTo="@id/account_option_fragment" />
+        <action
+            android:id="@+id/action_account_option_fragment_to_register_Fragment"
+            app:destination="@id/register_Fragment" />
+        <action
+            android:id="@+id/action_account_option_fragment_to_register_Fragment2"
+            app:destination="@id/register_Fragment"
+            app:enterAnim="@anim/left_toright" />
+    </fragment>
+</navigation>
