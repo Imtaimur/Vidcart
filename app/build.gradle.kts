@@ -3,11 +3,12 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id("com.google.gms.google-services")
     id ("kotlin-kapt")
     id ("kotlin-android")
     id ("kotlin-parcelize")
     id ("dagger.hilt.android.plugin")
+    id("com.google.gms.google-services")
+
 
 }
 
@@ -52,8 +53,13 @@ dependencies {
 
         // Hilt
         implementation("com.google.dagger:hilt-android:2.48.1")
+    implementation("com.google.firebase:firebase-firestore:25.1.2")
+    implementation("com.google.firebase:firebase-auth:22.3.1")
+    implementation("com.google.firebase:firebase-storage:21.0.1")
     implementation("com.google.firebase:firebase-database:21.0.0")
-    implementation("com.google.firebase:firebase-firestore:25.1.1")
+
+
+
     kapt("com.google.dagger:hilt-compiler:2.48.1")
 
         // Hilt ViewModel
@@ -64,9 +70,7 @@ dependencies {
         implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
 
         // Firebase
-        implementation("com.google.firebase:firebase-auth:23.1.0")
-        implementation("com.google.firebase:firebase-analytics:22.1.2")
-        implementation("com.google.firebase:firebase-firestore-ktx:25.1.1")
+
 
         // Navigation
         implementation("androidx.navigation:navigation-fragment-ktx:2.7.2")

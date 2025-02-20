@@ -10,8 +10,8 @@ import com.example.shopit.utils.Validname
 import com.example.shopit.utils.validatePassword
 import com.example.shopit.utils.validationemail
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.FirebaseFirestore
+
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.Flow

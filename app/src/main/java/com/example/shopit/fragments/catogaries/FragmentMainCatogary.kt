@@ -57,6 +57,7 @@ class FragmentMainCatogary:Fragment(R.layout.fragment_maincatogary) {
                     is Resource.Error->{
                         hideLoading()
                         Log.e(TAG,it.message.toString())
+                        Toast.makeText(requireContext(),it.message,Toast.LENGTH_SHORT).show()
                     }
 
                     else -> Unit

@@ -1,5 +1,6 @@
 package com.example.shopit.di
 
+
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.firestore
@@ -14,7 +15,7 @@ import javax.inject.Singleton
 object AppModule {
     @Provides
     @Singleton
-    fun provideFirebase()=FirebaseAuth.getInstance()
+    fun provideFirebase()= FirebaseAuth.getInstance()
 
     @Provides
     @Singleton

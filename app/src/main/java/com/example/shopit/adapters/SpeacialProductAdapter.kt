@@ -11,7 +11,7 @@ import com.example.shopit.data.Product
 import com.example.shopit.databinding.FragmentHomeBinding
 import com.example.shopit.databinding.SpecialRvItemBinding
 
-class SpeacialProductAdapter:RecyclerView.Adapter<SpeacialProductAdapter.SpecialProductsViewHolder>() {
+class  SpeacialProductAdapter:RecyclerView.Adapter<SpeacialProductAdapter.SpecialProductsViewHolder>() {
     inner class SpecialProductsViewHolder(private val binding: SpecialRvItemBinding):RecyclerView.ViewHolder(binding.root){
     fun bind(product: Product){
         binding.apply {

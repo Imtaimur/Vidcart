@@ -5,6 +5,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.shopit.data.Product
 import com.example.shopit.utils.Resource
 import com.google.firebase.firestore.FirebaseFirestore
+
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -28,6 +29,10 @@ class MainCatogaryViewModel @Inject constructor(
             .addOnSuccessListener {result->
                 viewModelScope.launch {
                     val specialProductlist=result.toObjects(Product::class.java)
+                    viewModelScope.launch {
+                        _specialPoroducts.emit(Resource.Success(specialProductlist))
+
+                    }
                 }
 
         }.addOnFailureListener {
