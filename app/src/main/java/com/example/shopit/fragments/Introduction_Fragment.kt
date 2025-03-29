@@ -1,16 +1,24 @@
 package com.example.shopit.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.example.shopit.R
+import com.example.shopit.activities.ShopingActivity
 import com.example.shopit.databinding.FragmentIntroductionBinding
-
+import com.example.shopit.viewmodel.introductionViewModel
+import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
+@AndroidEntryPoint
 class Introduction_Fragment: Fragment(R.layout.fragment_introduction) {
     private lateinit var binding:FragmentIntroductionBinding
+    private val viewModel by viewModels<introductionViewModel>()
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -22,7 +30,29 @@ class Introduction_Fragment: Fragment(R.layout.fragment_introduction) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        lifecycleScope.launchWhenStarted {
+             viewModel.navigate.collect{
+                 when(it){
+                     introductionViewModel.SHOPPING_ACTIVITY->{
+                         Intent(requireActivity(),ShopingActivity::class.java).also { intent ->
+                             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
+                             startActivity(intent)
+
+                     }}
+                 }
+                 when(it){
+                     introductionViewModel.Account_option_fragment->{
+                         findNavController().navigate(R.id.action_introduction_Fragment_to_account_option_fragment2)
+
+                     }
+                     else->Unit
+                 }
+
+             }
+        }
         binding.startbutton.setOnClickListener{
+            viewModel.StartButtonClick()
+
             findNavController().navigate(R.id.action_introduction_Fragment_to_account_option_fragment2)
         }
     }
