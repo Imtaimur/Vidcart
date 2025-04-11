@@ -9,20 +9,41 @@
         android:id="@+id/homefragmet"
         android:name="com.example.shopit.fragments.shopping.homefragmet"
         android:label="homefragmet"
-        tools:layout="@layout/fragment_home"/>
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homefragmet_to_productdetailfragment3"
+            app:destination="@id/productdetailfragment" />
+    </fragment>
     <fragment
         android:id="@+id/searchfragmet"
         android:name="com.example.shopit.fragments.shopping.searchfragmet"
         android:label="searchfragmet"
-        tools:layout="@layout/fragment_search"/>
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_searchfragmet_to_productdetailfragment3"
+            app:destination="@id/productdetailfragment" />
+    </fragment>
     <fragment
         android:id="@+id/cartfragmet"
         android:name="com.example.shopit.fragments.shopping.cartfragmet"
         android:label="cartfragmet"
-        tools:layout="@layout/fragment_cart"/>
+        tools:layout="@layout/fragment_cart">
+        <action
+            android:id="@+id/action_cartfragmet_to_productdetailfragment2"
+            app:destination="@id/productdetailfragment" />
+    </fragment>
     <fragment
         android:id="@+id/profilefragmet"
         android:name="com.example.shopit.fragments.shopping.profilefragmet"
         android:label="profilefragmet"
         tools:layout="@layout/fragment_profile"/>
+    <fragment
+        android:id="@+id/productdetailfragment"
+        android:name="com.example.shopit.fragments.shopping.productdetailfragment"
+        android:label="productdetailfragment"
+        tools:layout="@layout/fragmetn_product_detail">
+        <argument
+            android:name="product"
+            app:argType="com.example.shopit.data.Product" />
+    </fragment>
 </navigation>

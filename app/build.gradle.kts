@@ -8,6 +8,7 @@ plugins {
     id ("kotlin-parcelize")
     id ("dagger.hilt.android.plugin")
     id("com.google.gms.google-services")
+    id("androidx.navigation.safeargs.kotlin")
 
 
 }
@@ -60,6 +61,7 @@ dependencies {
 
 
 
+
     kapt("com.google.dagger:hilt-compiler:2.48.1")
 
         // Hilt ViewModel
@@ -81,6 +83,7 @@ dependencies {
         implementation("androidx.appcompat:appcompat:1.7.0")
         implementation("com.google.android.material:material:1.12.0")
         implementation("androidx.constraintlayout:constraintlayout:2.2.0")
+
 
         // Test dependencies
         testImplementation("junit:junit:4.13.2")
