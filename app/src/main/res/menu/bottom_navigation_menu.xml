@@ -5,8 +5,10 @@
         android:id="@+id/homefragmet"
         android:icon="@drawable/ic_home"
 
+
         />
     <item
+
         android:title="Search"
         android:id="@+id/searchfragmet"
         android:icon="@drawable/ic_search"/>

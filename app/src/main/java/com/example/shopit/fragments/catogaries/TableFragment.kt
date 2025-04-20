@@ -37,6 +37,7 @@ class TableFragment:base_catogaryfragment() {
 
                     }
                     is Resource.Success->{
+                        hidefferloading()
                         offerAdapter.differ.submitList(it.data)
 
                     }

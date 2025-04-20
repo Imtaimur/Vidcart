@@ -13,5 +13,6 @@ data class Product(
     val description: String? = null,
     val images: List<String>
 ):Parcelable{
+
     constructor():this("0","","",0f, images = emptyList())
 }

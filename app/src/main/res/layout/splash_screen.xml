@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:orientation="vertical"
+    android:background="@drawable/back"
+    android:gravity="center"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shop Smart Shop Short"
+        app:layout_constraintTop_toBottomOf="@id/midline"
+        app:layout_constraintStart_toStartOf="@id/midline2"
+        android:textColor="@color/white"
+
+        android:textSize="20sp"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/midline"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        app:layout_constraintGuide_percent=".65"
+        android:layout_height="wrap_content"
+        />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/midline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".2"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
