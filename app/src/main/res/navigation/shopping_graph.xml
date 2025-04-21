@@ -16,9 +16,9 @@
     </fragment>
     <fragment
         android:id="@+id/searchfragmet"
-        android:name="com.example.shopit.fragments.shopping.searchfragmet"
+        android:name="com.example.shopit.fragments.shopping.videosFragment"
         android:label="searchfragmet"
-        tools:layout="@layout/fragment_search">
+        tools:layout="@layout/fragment_videos">
         <action
             android:id="@+id/action_searchfragmet_to_productdetailfragment3"
             app:destination="@id/productdetailfragment" />

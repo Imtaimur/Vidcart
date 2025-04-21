@@ -9,9 +9,9 @@
         />
     <item
 
-        android:title="Search"
+        android:title="Videos"
         android:id="@+id/searchfragmet"
-        android:icon="@drawable/ic_search"/>
+        android:icon="@drawable/video"/>
     <item
         android:title="Cart"
         android:id="@+id/cartfragmet"

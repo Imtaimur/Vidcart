@@ -22,10 +22,10 @@ class profilefragmet: Fragment(R.layout.fragment_profile) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.GotoProfile.setOnClickListener {
+        binding.constraintProfile.setOnClickListener {
             findNavController().navigate(R.id.action_profilefragmet_to_userAccountFragment)
         }
-        binding.checkorders.setOnClickListener {
+        binding.linearAllOrders.setOnClickListener {
             findNavController().navigate(R.id.action_profilefragmet_to_orderFragment)
         }
     }
