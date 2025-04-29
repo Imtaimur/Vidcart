@@ -1,0 +1,5 @@
+<!-- res/color/nav_item_icon_tint.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="#8B4513" android:state_checked="true" /> <!-- Brown color when active -->
+    <item android:color="@android:color/darker_gray" /> <!-- Default color when inactive -->
+</selector>
