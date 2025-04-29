@@ -5,7 +5,7 @@
     android:id="@+id/root"
     android:orientation="vertical"
     android:background="@drawable/back"
-    android:gravity="center"
+
     android:layout_height="match_parent">
     <TextView
         android:layout_width="wrap_content"
@@ -16,13 +16,13 @@
         android:textColor="@color/white"
 
         android:textSize="20sp"/>
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/midline"
-        android:orientation="horizontal"
         android:layout_width="wrap_content"
-        app:layout_constraintGuide_percent=".65"
         android:layout_height="wrap_content"
-        />
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="475dp" />
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/midline2"
         android:layout_width="wrap_content"
